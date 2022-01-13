@@ -14,6 +14,6 @@ export const getMovieList = async (params) => {
     params,
   });
 
-  console.log(data);
+  //console.log(data);
   return data;
 };

@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Main, Movie, Book } from "./component/pages";
 import { TopNav } from "./component/organisms";
+import { Main, Movie, Book } from "./component/pages";
 
 const Router = () => {
   return (

@@ -4,12 +4,15 @@ const MovieList = ({ data }) => {
   return (
     <>
       <List>
-        {data.map(({ image, title, pubDate, userRating }, index) => (
-          <Item key={index}>
+        {data.map(({ image, title, pubDate, userRating, link }) => (
+          <a key={link} href={link} target="_blank" rel="noreferrer">
+          <Item>
             <Image src={image} />
-            <Title>{title}</Title>
-            <PubDate>{pubDate}</PubDate> / <UserRating>{userRating}</UserRating>
+            <Title dangerouslySetInnerHTML={{ __html: title }} />
+            <PubDate>{pubDate}</PubDate> /{" "}
+            <UserRating>{userRating}</UserRating>
           </Item>
+        </a>
         ))}
       </List>
     </>
