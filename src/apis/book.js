@@ -8,6 +8,6 @@ export const getBookList = async (params) => {
     },
     params,
   });
-  //console.log(data);
+
   return data;
 };

@@ -27,7 +27,7 @@ const List = styled.ul`
 const Item = styled.li``;
 const Image = styled.img`
   width: 100%;
-  height: 360px;
+  height: 320px;
 `;
 const Title = styled.p``;
 const PubDate = styled.span``;
