@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 /*   <Item>
         <Image src="https://www.wevity.com/upload/contest/20200926101901_bee9fb76.jpg" />
         <Title>책제목입니다.</Title>
@@ -9,14 +9,14 @@ import styled from "styled-components";
 const BookList = ({ data }) => {
   return (
     <List>
-      {data.map(({ link, image, title, pubdate, publisher }) => (
-        <a key={link} href={link} target="_blank" rel="noreferrer">
+      {data.map(({image, title, pubdate, publisher ,isbn, link}) => (
+        <Link to={`/book/${isbn.split(" ")[1]}`} key={link} >
           <Item>
             <Image src={image} />
             <Title dangerouslySetInnerHTML={{ __html: title }} />
             <Pubdate>{pubdate}</Pubdate> / <Publisher>{publisher}</Publisher>
           </Item>
-        </a>
+        </Link>
       ))}
     </List>
   );
