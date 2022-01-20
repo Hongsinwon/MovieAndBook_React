@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MovieAndBook_React.git/static/css/main.2cb3282e.css",
+    "main.js": "/MovieAndBook_React.git/static/js/main.8651d2ab.js",
+    "index.html": "/MovieAndBook_React.git/index.html",
+    "main.2cb3282e.css.map": "/MovieAndBook_React.git/static/css/main.2cb3282e.css.map",
+    "main.8651d2ab.js.map": "/MovieAndBook_React.git/static/js/main.8651d2ab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2cb3282e.css",
+    "static/js/main.8651d2ab.js"
+  ]
+}
