@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Main = () => {
   return (
     <>
-      <h1>영화 &amp; 책 검색 사이트</h1>
+      <h1>영화 &amp; 책 검색 사이트11</h1>
       <Wrapper>
         <Link to="/movie">
           <BtnLink>영화 검색</BtnLink>
@@ -12,7 +12,6 @@ const Main = () => {
         <Link to="/book">
           <BtnLink>책 검색</BtnLink>
         </Link>
-        {/* {<a href="/book">책검색</a>} */}
       </Wrapper>
     </>
   );
