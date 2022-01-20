@@ -37,7 +37,7 @@ useEffect(() => {
   };
 
   const searchBook = async() => {
-    if (!query) return;
+    if (!query) return; // 값이 없으면 에러가 나서 return처리
     const start = page * 10 -9
     const params = {query, start};
     const { items, total } = await getBookList(params);

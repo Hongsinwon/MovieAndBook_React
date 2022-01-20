@@ -19,6 +19,7 @@ const linkList = [
 ]
 
 const TopNav = () => {
+  //useLocation() => hash , key, pathname="/", search, state
    const {pathname} = useLocation();
    //pathname ==  "/" 이면  <Nav> 내용이 <></>이 되도록한다.
    if (pathname === "/") {
