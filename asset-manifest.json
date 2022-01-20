@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/MovieAndBook_React.git/static/css/main.2cb3282e.css",
-    "main.js": "/MovieAndBook_React.git/static/js/main.d0b6acc1.js",
-    "index.html": "/MovieAndBook_React.git/index.html",
-    "main.2cb3282e.css.map": "/MovieAndBook_React.git/static/css/main.2cb3282e.css.map",
-    "main.d0b6acc1.js.map": "/MovieAndBook_React.git/static/js/main.d0b6acc1.js.map"
+    "main.css": "/MovieAndBook_React/static/css/main.2cb3282e.css",
+    "main.js": "/MovieAndBook_React/static/js/main.c0c04e2b.js",
+    "index.html": "/MovieAndBook_React/index.html",
+    "main.2cb3282e.css.map": "/MovieAndBook_React/static/css/main.2cb3282e.css.map",
+    "main.c0c04e2b.js.map": "/MovieAndBook_React/static/js/main.c0c04e2b.js.map"
   },
   "entrypoints": [
     "static/css/main.2cb3282e.css",
-    "static/js/main.d0b6acc1.js"
+    "static/js/main.c0c04e2b.js"
   ]
 }
