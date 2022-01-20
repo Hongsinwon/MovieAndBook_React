@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { TopNav } from "./component/organisms";
 import { Main, Movie, Book, BookDetail } from "./component/pages";
 // 라우터 v6 HOOK
@@ -8,7 +8,7 @@ import { Main, Movie, Book, BookDetail } from "./component/pages";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <TopNav />
       <Routes>
         <Route path="/" element={<Main />} />
@@ -16,7 +16,7 @@ const Router = () => {
         <Route path="/book" element={<Book />} />
         <Route path="/book/:isbn" element={<BookDetail />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
