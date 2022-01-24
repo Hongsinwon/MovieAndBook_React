@@ -42,5 +42,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://Hongsinwon.github.io/MovieAndBook_React"
+  "proxy": "https://openapi.naver.com"
 }
