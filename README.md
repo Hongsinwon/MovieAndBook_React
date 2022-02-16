@@ -24,7 +24,17 @@
 </br>
 
 ## 문제이슈 (cors)
--
+> 교차 출처 리소스 공유(Cross-Origin Resource Sharing, CORS)는 추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제이다. - MDN
+> 
+> 여기서 origin(출처) 이란 scheme(protocol), host(domain), port 로 구성된다.
+> 
+> protocol은 https:// Host는 www.google.com Port는 :443 이며, 동일 출처(Same Origin)란 scheme, host, port 가 모두 같을때를 말한다.
+> 
+> 또한 SOP(Same-Origin Policy)이란 같은 출처에서만 리소스를 공유할 수 있다는 규칙이다. 브라우저에서 다른 서버에서 요청할 경우에 해당되고, 브라우저를 거치지 않고 서버 간 통신을 할 때는 이 정책이 적용되지 않는다.
+> 
+> 그런데 이런 정책이 왜 존재할까? 만약 다른 출처의 어플리케이션이 서로 통신하는 것에 대해 아무런 제약도 존재하지 않는다면 악의를 가진 사용자가 소스 코드를 보고 CSRF(Cross-Site Request Forgery) 나 XSS(Cross-Site Scripting) 와 같은 방법을 사용하여 정보를 탈취할 수 있다.
+> 
+> CORS는 다른 출처의 리소스가 필요한 경우,  SOP를 우회하기 위한 여러가지 방법 중 가장 권장되는 방법이다.
 
 </br>
 
