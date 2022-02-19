@@ -2,8 +2,8 @@ import axios from "axios";
 
 const instance = axios.create({
   headers: {
-    "X-Naver-Client-Id": "y0X6A9DNHYg_o_EIHtNm",
-    "X-Naver-Client-Secret": "K0CQnEHgjy",
+    "X-Naver-Client-Id": "네이버 API 아이디",
+    "X-Naver-Client-Secret": "네이버 API 비밀번호",
   },
 });
 
