@@ -44,10 +44,14 @@
  ## 완성된 페이지
  
 #### 1. 메인
+![메인](images/main.png)
  
 #### 2. 영화 검색
+![영화 검색](images/movie.png)
   
 #### 3. 책 검색
+![책 검색](images/book.png)
    
 #### 4. 책 상세페이지
+![책 상세페이지](images/detail.png)
 
