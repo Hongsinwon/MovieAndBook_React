@@ -1,7 +1,7 @@
 <b>[넵플러스 프로젝트] 2022.1.10 ~ 
 
 
-<h1> 네이버 API을 활용한 영화 & 책검색 프로젝트 </h1>
+  <h1> 네이버 API을 활용한 영화 & 책검색 프로젝트 - MOVE </br> https://search-reactapp.herokuapp.com/</h1>
   
 ## 주요 기능 
   1. 네이버 Api를 이용한 영화 & 책 검색 리스트 출력
@@ -13,6 +13,9 @@
   1. html
   2. css
   3. React.js
+  4. node.js
+  5. express
+  6. heroku
 
 </br>
 
