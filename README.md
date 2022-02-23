@@ -1,4 +1,4 @@
-<b>[넵플러스 프로젝트] 2022.1.10 ~ 
+<b>[넵플러스 프로젝트] 2022.1.10 ~ 2022.2.23
 
 
   <h1> 네이버 API을 활용한 영화 & 책검색 프로젝트 - MOVE </br> https://search-reactapp.herokuapp.com/</h1>
@@ -42,6 +42,90 @@
 
 </br>
 
+cors 오류해결에 도움을 주었던 블로그 - https://xiubindev.tistory.com/115
+
+</br> 
+
+1. client/src/apis/index.js
+ ```javascript
+    import axios from "axios";
+
+    const instance = axios.create({
+     baseURL: "https://search-reactapp.herokuapp.com/", //heroku주소로 변경
+      headers: {
+       "X-Naver-Client-Id": "Client-Id를 넣어주세요",
+       "X-Naver-Client-Secret": "Client-Secret를 넣어주세요",
+      },
+    });
+
+    export { instance };
+ ```
+ 
+ </br> 
+ 
+ 2. server/router/index.js :: 서버 : Access-Control-Allow-Origin 헤더 세팅하기
+ ```javascript
+    //영화리스트
+    router.get("/movie", async function (req, res, next) {
+      const result = await getMovieList(req.query);
+      res.header(
+        "Access-Control-Allow-Origin",
+        "https://search-reactapp.herokuapp.com/"
+      );
+      res.send(result);
+    });
+    
+    //책리스트
+    router.get("/book", async function (req, res, next) {
+      const result = await getBookList(req.query);
+      res.header(
+        "Access-Control-Allow-Origin",
+        "https://search-reactapp.herokuapp.com/"
+      );
+      res.send(result);
+    });
+
+    router.get("/book/:isbn", async function (req, res, next) {
+      const { isbn } = req.params;
+      const params = {
+       d_isbn: isbn,
+      };
+      const result = await getBookDetail(params);
+     res.header(
+       "Access-Control-Allow-Origin",
+       "https://search-reactapp.herokuapp.com/"
+       );
+      res.send(result);
+    });
+
+ ```
+ 
+2. server/router/index.js 추가한 내용
+ 
+  ```javascript
+     res.header(
+       "Access-Control-Allow-Origin",
+       "https://search-reactapp.herokuapp.com/"
+       );
+ ```
+ 
+ </br> 
+
+3. app.js  :: 서버 : CORS 미들웨어 사용하기
+  ```javascript
+    const app = express();
+
+    const __dirname = path.resolve();
+    const port = process.env.PORT || "8080";
+
+    const corsOptions = {
+     origin: "https://search-reactapp.herokuapp.com/",
+      credentials: true,
+    };
+    app.use(cors(corsOptions));
+ ```
+
+</br>
 --------------------------------------------
 </br>
  
